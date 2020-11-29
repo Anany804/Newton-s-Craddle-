@@ -16,12 +16,12 @@ function preload()
 function setup() {
 	createCanvas(800, 700);
 
-	roof = new Roof(350, 100, 300, 30);
+	
 	engine = Engine.create();
 	world = engine.world;
 
 	//Create the Bodies Here.
-
+	roof = new Roof(350, 100, 300, 30);
 	// there should be difference of 160 pixels
 	bob1 = new Bob(250, 300);
 	bob2 = new Bob(300, 300);
@@ -60,7 +60,7 @@ function draw() {
 }
 
 function keyPressed(){
-	if (keyCode === SPACE){
+	if (keyCode === 32){
 		Matter.Body.applyForce(bob1.body, bob1.body.position, {x: -730, y: 0})
 	}
 }
